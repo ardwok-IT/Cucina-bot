@@ -37,7 +37,7 @@ def handle(message):
     try:
         bot.send_chat_action(message.chat.id, 'typing')
         response = client.messages.create(
-            model="claude-sonnet-4-20250514",
+            model="claude-sonnet-4-5",
             max_tokens=1000,
             system=SYSTEM_PROMPT,
             messages=[{"role": "user", "content": message.text}]
