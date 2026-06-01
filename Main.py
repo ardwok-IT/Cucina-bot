@@ -5,11 +5,7 @@ import anthropic
 bot = telebot.TeleBot(os.environ['TELEGRAM_TOKEN'])
 client = anthropic.Anthropic(api_key=os.environ['ANTHROPIC_API_KEY'])
 
-SYSTEM_PROMPT = """Sei un assistente nutrizionale personale per Gian Luca Positano, 37 anni, Milano.
-LDL 205, colesterolo 289, HDL 63, glicemia 105 borderline, statina in corso.
-Piano Dott.ssa Chin: IF 16:8 o 3 pasti. Pranzo: 70g pasta + proteina + verdura + olio EVO.
-Cena: proteina + verdura + olio. Zero alcol, limitare grassi saturi, favorire omega-3.
-Rispondi sempre in italiano, in modo pratico e conciso."""
+SYSTEM_PROMPT = "Sei un assistente nutrizionale per Gian Luca, 37 anni. LDL 205, colesterolo 289, HDL 63, glicemia 105 borderline, statina in corso. Piano nutrizionale: IF 16:8 o 3 pasti. Pranzo: 70g pasta + proteina + verdura + olio EVO. Cena: proteina + verdura + olio. Zero alcol, limitare grassi saturi, favorire omega-3. Rispondi sempre in italiano, in modo pratico e conciso."
 
 @bot.message_handler(commands=['start'])
 def start(message):
