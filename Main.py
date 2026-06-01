@@ -44,7 +44,8 @@ def handle(message):
         )
         bot.reply_to(message, response.content[0].text)
     except Exception as e:
-        bot.reply_to(message, "Errore, riprova tra un momento.")
+       
+        
+bot.reply_to(message, "Errore, riprova tra un bot.infinity_polling(allowed_updates=[], timeout=60, long_polling_timeout=60)
 
-bot.infinity_polling()
 
